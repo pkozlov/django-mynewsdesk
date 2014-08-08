@@ -4,6 +4,11 @@ django-mynewsdesk
 
 Django package for MyNewsDesk API
 
+Installation
+------------
+
+    # pip install django-mynewsdesk
+
 Quick start
 -----------
 
@@ -63,6 +68,20 @@ Contribute & Support
 If you have an issue requests, or you find a bug, you can easily report them on GitHub Issues.
 If you want to fix bug or create new feature, just fork, make changes and create a pull request. List of TODOs you can find below here.
 Furthermore, you can create better documentation.
+
+TODO
+----
+
+- method for 'view' API service
+- method for 'search' API service
+- method for 'pressroom_info' API service
+- method for 'create_comment' API service
+- uncomment models and parse 'subjects'
+- uncomment models and parse 'geographic_areas'
+- uncomment models and parse 'contact_peoples'
+- uncomment models and parse 'comments'
+- parse 'related_items'
+- parse 'instant_messaging'
 
 Credits
 -------
