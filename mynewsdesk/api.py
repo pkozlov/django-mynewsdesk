@@ -1,6 +1,6 @@
 from django.conf import settings
 import requests
-import mynewsdesk
+from mynewsdesk import models
 
 
 def request(service, params={}):
@@ -14,7 +14,7 @@ def json_request(service, params={}):
     return r.json()
 
 
-def get_list(type_of_media=mynewsdesk.TYPE_PRESSRELEASE, limit=20, offset=0, order=False, callback=False, pressroom=False, archived=False):
+def get_list(type_of_media=models.TYPE_PRESSRELEASE, limit=20, offset=0, order=False, callback=False, pressroom=False, archived=False):
     params = {
         'type_of_media': type_of_media,
         'limit': limit,

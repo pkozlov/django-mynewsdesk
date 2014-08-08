@@ -39,7 +39,7 @@ API
 
 - mynewsdesk.api.get_list(type_of_media) - request material list
 
-    type_of_media: mynewsdesk.TYPE_PRESSRELEASE, mynewsdesk.TYPE_NEWS, etc...
+    type_of_media: mynewsdesk.models.TYPE_PRESSRELEASE, mynewsdesk.models.TYPE_NEWS, etc...
 
     returns: JSON from api request
 
@@ -52,7 +52,7 @@ API
 
 - mynewsdesk.sync.sync_list(type_of_media) - synchronize materials to local database
 
-    type_of_media: mynewsdesk.TYPE_PRESSRELEASE, mynewsdesk.TYPE_NEWS, etc...
+    type_of_media: mynewsdesk.models.TYPE_PRESSRELEASE, mynewsdesk.models.TYPE_NEWS, etc...
 
     returns: dictionary like this {updated: n, create: n, errors: n}
 

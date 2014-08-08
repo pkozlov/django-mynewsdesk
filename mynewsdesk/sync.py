@@ -1,4 +1,3 @@
-import mynewsdesk
 from mynewsdesk import models, api
 
 def add_report(report, result):
@@ -14,28 +13,28 @@ def sync_all():
         'errors': 0
     }
 
-    r = sync_list(mynewsdesk.TYPE_PRESSRELEASE)
+    r = sync_list(models.TYPE_PRESSRELEASE)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_NEWS)
+    r = sync_list(models.TYPE_NEWS)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_BLOG_POST)
+    r = sync_list(models.TYPE_BLOG_POST)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_CONTACT_PERSON)
+    r = sync_list(models.TYPE_CONTACT_PERSON)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_DOCUMENT)
+    r = sync_list(models.TYPE_DOCUMENT)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_EVENT)
+    r = sync_list(models.TYPE_EVENT)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_IMAGE)
+    r = sync_list(models.TYPE_IMAGE)
     report = add_report(report, r)
 
-    r = sync_list(mynewsdesk.TYPE_VIDEO)
+    r = sync_list(models.TYPE_VIDEO)
     report = add_report(report, r)
 
     return report
@@ -44,7 +43,7 @@ def add_link(material, link):
     db_link = models.Link(material=material, url=link['url'], text=link['text'])
     db_link.save()
 
-def sync_list(service=mynewsdesk.TYPE_PRESSRELEASE):
+def sync_list(service=models.TYPE_PRESSRELEASE):
     item_list = api.get_list(service)
     report = {
         'created': 0,
