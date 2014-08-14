@@ -40,7 +40,7 @@ def subscribe(email, types_list):
         'newsdesk_subscriber_email': email
     }
     for stype in types_list:
-        params['newsdesk_subscribe_to_' + stype] = 1
+        params['newsdesk_subscribe_to_' + models.SUBSCRIBE_ENDINGS[stype]] = 1
     r = request('subscribe', params)
     if r.status_code == requests.codes.ok:
         return True

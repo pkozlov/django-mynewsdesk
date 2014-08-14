@@ -11,6 +11,17 @@ TYPE_VIDEO = 'video'
 TYPE_DOCUMENT = 'document'
 TYPE_CONTACT_PERSON = 'contact_person'
 
+SUBSCRIBE_ENDINGS = {
+    TYPE_PRESSRELEASE: 'pressreleases',
+    TYPE_NEWS: 'news',
+    TYPE_BLOG_POST: 'blog_posts',
+    TYPE_EVENT: 'events',
+    TYPE_IMAGE: 'images',
+    TYPE_VIDEO: 'videos',
+    TYPE_DOCUMENT: 'documents',
+    TYPE_CONTACT_PERSON: 'contact_person'
+}
+
 class Tag(models.Model):
     url = models.URLField(blank=True, null=True)
     name = models.CharField(max_length=255, primary_key=True)
