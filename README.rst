@@ -7,9 +7,9 @@ Django package for MyNewsDesk API
 Installation
 ------------
 
-    Use your favorite Python installer to install it from PyPI::
+Use your favorite Python installer to install it from PyPI::
 
-        pip install django-mynewsdesk
+    pip install django-mynewsdesk
 
 Quick start
 -----------
