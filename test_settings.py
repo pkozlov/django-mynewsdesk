@@ -15,7 +15,6 @@ DATABASES = {
 
 INSTALLED_APPS = (
     'mynewsdesk',
-    'south',
 )
 
 MYNEWSDESK_KEY = 'unique_key'
