@@ -25,7 +25,13 @@ Quick start
 
     MYNEWSDESK_KEY = 'your unique key'
 
-3. Run `python manage.py migrate` to create the polls models.
+3. For South support, customize the SOUTH_MIGRATION_MODULES setting like so::
+
+    SOUTH_MIGRATION_MODULES = {
+        'mynewsdesk': 'mynewsdesk.south_migrations',
+    }
+
+4. Run `python manage.py migrate` to create the polls models.
 
 
 API
