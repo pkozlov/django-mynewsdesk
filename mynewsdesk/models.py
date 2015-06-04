@@ -70,7 +70,7 @@ class Material(models.Model):
     type = models.CharField(max_length=15)
     language = models.CharField(max_length=10)
 
-    channels = models.ManyToManyField(Channel, related_name='materials', blank=True, null=True)
+    channels = models.ManyToManyField(Channel, related_name='materials', blank=True)
 
     source_id = models.IntegerField(blank=True, null=True)
     source_name = models.CharField(max_length=255, blank=True, null=True)
@@ -106,7 +106,7 @@ class Material(models.Model):
     end_at = models.DateTimeField(blank=True, null=True)
     location = models.TextField(blank=True, null=True)
     signup_url = models.URLField(blank=True, null=True)
-    event_types = models.ManyToManyField(EventType, related_name='materials', blank=True, null=True)
+    event_types = models.ManyToManyField(EventType, related_name='materials', blank=True)
 
     # for image
     photographer = models.TextField(blank=True, null=True)
@@ -136,7 +136,7 @@ class Material(models.Model):
     attached_pdf = models.URLField(blank=True, null=True)
     attached_doc = models.URLField(blank=True, null=True)
 
-    tags = models.ManyToManyField(Tag, related_name='materials', blank=True, null=True)
+    tags = models.ManyToManyField(Tag, related_name='materials', blank=True)
     # subjects = models.ManyToManyField(Subject, related_name='materials', blank=True, null=True)
     # geographic_areas = models.ManyToManyField(GeographicArea, related_name='materials', blank=True, null=True)
 
