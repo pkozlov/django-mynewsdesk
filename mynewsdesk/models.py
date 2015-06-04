@@ -67,7 +67,7 @@ class EventType(models.Model):
 
 class Material(models.Model):
     id = models.IntegerField(primary_key=True)
-    type = models.CharField(max_length=15)
+    type_of_media = models.CharField(max_length=15)
     language = models.CharField(max_length=10)
 
     channels = models.ManyToManyField(Channel, related_name='materials', blank=True, null=True)
