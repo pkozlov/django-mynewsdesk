@@ -2,7 +2,7 @@
 django-mynewsdesk
 =================
 
-Django package for MyNewsDesk API
+Django package for `MyNewsDesk API <http://www.mynewsdesk.com/docs/webservice_pressroom>`_
 
 Installation
 ------------
